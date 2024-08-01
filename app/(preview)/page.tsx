@@ -106,9 +106,11 @@ export default function Home() {
               </div>
             )}
 
-            {expenses.reverse().map((expense) => (
-              <ExpenseView key={`${expense.details}`} expense={expense} />
-            ))}
+            {Array.from(expenses)
+              .reverse()
+              .map((expense) => (
+                <ExpenseView key={`${expense.details}`} expense={expense} />
+              ))}
           </div>
         ) : (
           <motion.div className="h-[350px] px-4 w-full md:w-[500px] md:px-0 pt-20">
