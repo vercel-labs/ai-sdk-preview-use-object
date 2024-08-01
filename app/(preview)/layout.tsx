@@ -5,8 +5,8 @@ import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ai-sdk-attachments-preview.vercel.dev"),
-  title: "Object Generation Preview",
-  description: "Experimental preview of attachments in useChat hook",
+  title: "Schema Generation Preview",
+  description: "Experimental preview of schema generation with useObject hook.",
 };
 
 export default function RootLayout({
