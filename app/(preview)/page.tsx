@@ -19,7 +19,7 @@ const ExpenseView = ({ expense }: { expense: Expense | PartialExpense }) => {
       animate={{ opacity: 1 }}
     >
       <div className="flex flex-row gap-4 w-full">
-        <div className="text-zinc-400 dark:text-zinc-300 w-16">
+        <div className="text-zinc-400 dark:text-zinc-400 w-16">
           {expense?.date}
         </div>
         <div className="text-zinc-800 dark:text-zinc-300 flex-1 capitalize flex flex-row gap-2 items-center">
@@ -34,10 +34,10 @@ const ExpenseView = ({ expense }: { expense: Expense | PartialExpense }) => {
             ))}
           </div>
         </div>
-        <div className="text-zinc-600 dark:text-zinc-300 text-xs bg-zinc-200 rounded-md flex flex-row items-center p-1 font-medium capitalize h-fit">
+        <div className="text-zinc-600 dark:text-zinc-300 text-xs bg-zinc-200 rounded-md flex flex-row items-center p-1 font-medium capitalize h-fit dark:bg-zinc-700 dark:text-zinc-300">
           {expense?.category?.toLowerCase()}
         </div>
-        <div className="text-emerald-600 dark:text-zinc-300 w-8 text-right">
+        <div className="text-emerald-600 dark:text-emerald-400 w-8 text-right">
           ${expense?.amount}
         </div>
       </div>
@@ -87,7 +87,7 @@ export default function Home() {
         >
           <input
             name="expense"
-            className="bg-zinc-100 rounded-md px-2 py-1.5 w-full outline-none dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300 md:max-w-[500px] max-w-[calc(100dvw-32px)] disabled:text-zinc-400 disabled:cursor-not-allowed"
+            className="bg-zinc-100 rounded-md px-2 py-1.5 w-full outline-none dark:bg-zinc-700 text-zinc-800 dark:text-zinc-300 md:max-w-[500px] max-w-[calc(100dvw-32px)] disabled:text-zinc-400 disabled:cursor-not-allowed placeholder:text-zinc-400"
             placeholder="Expense a transaction..."
             value={input}
             onChange={(event) => {
