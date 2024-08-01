@@ -11,11 +11,7 @@ import { toast } from "sonner";
 import Link from "next/link";
 import { Expense, expenseSchema, PartialExpense } from "@/app/api/chat/schema";
 
-export const ExpenseView = ({
-  expense,
-}: {
-  expense: Expense | PartialExpense;
-}) => {
+const ExpenseView = ({ expense }: { expense: Expense | PartialExpense }) => {
   return (
     <motion.div
       className={`flex flex-row gap-2 px-4 w-full md:w-[500px] md:px-0`}
