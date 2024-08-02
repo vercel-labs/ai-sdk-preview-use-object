@@ -68,7 +68,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-row justify-center pt-20 h-dvh bg-white dark:bg-zinc-900">
-      <div className="flex flex-col justify-between gap-4">
+      <div className="flex flex-col gap-4">
         <form
           className="flex flex-col gap-2 relative items-center"
           onSubmit={(event) => {
@@ -77,7 +77,7 @@ export default function Home() {
             const form = event.target as HTMLFormElement;
 
             const input = form.elements.namedItem(
-              "expense"
+              "expense",
             ) as HTMLInputElement;
 
             if (input.value.trim()) {
@@ -111,7 +111,8 @@ export default function Home() {
             ))}
           </div>
         ) : (
-          <motion.div className="h-[350px] px-4 w-full md:w-[500px] md:px-0 pt-20">
+          <motion.div className="h-[350px] px-4 w-full md:w-[500px] md:px-0">
+            <div className="absolute top-4 right-4"></div>
             <div className="border rounded-lg p-6 flex flex-col gap-4 text-zinc-500 text-sm dark:text-zinc-400 dark:border-zinc-700">
               <p className="flex flex-row justify-center gap-4 items-center text-zinc-900 dark:text-zinc-50">
                 <VercelIcon />
@@ -134,6 +135,24 @@ export default function Home() {
                 </Link>
                 hook from Vercel AI SDK.
               </p>
+              <div className="flex space-x-2 items-center justify-between">
+                <Link
+                  target="_blank"
+                  href="https://github.com/vercel-labs/ai-sdk-preview-use-object"
+                  className="inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-10 px-4 py-2"
+                >
+                  Source Code
+                </Link>
+                <Link
+                  target="_blank"
+                  href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel-labs%2Fai-sdk-preview-use-object&env=OPENAI_API_KEY&envDescription=API%20keys%20needed%20for%20this%20application.&envLink=platform.openai.com"
+                >
+                  <img
+                    src="https://vercel.com/button"
+                    alt="Deploy with Vercel"
+                  />
+                </Link>
+              </div>
             </div>
           </motion.div>
         )}
