@@ -4,7 +4,7 @@
 "use client";
 
 import { ObjectIcon, VercelIcon } from "@/components/icons";
-import { experimental_useObject } from "ai/react";
+import { experimental_useObject } from "@ai-sdk/react";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
